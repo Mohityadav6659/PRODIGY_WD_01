@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Report</title>
+    <!-- Google font -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome Cdn Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--Header  -->
+      <div class="header">
+        <div class="search-bar">
+          <input
+            class="input-search"
+            placeholder=" Search for your preferred city, e.g., Delhi."
+          />
+          <button class="search-btn btn">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </button>
+        </div>
+        <button class="btn current-location-btn">
+          <i class="fa-solid fa-location-crosshairs"></i> Current location
+        </button>
+      </div>
+
+      <!-- cards -->
+      <div class="main">
+        <!-- time card -->
+        <div class="time-card">
+          <div id="city-name">Delhi</div>
+          <div id="time">time</div>
+          <div id="day"></div>
+        </div>
+
+        <!-- Weather details card -->
+        <div class="weather-details">
+          <!-- First portion -->
+          <div>
+            <div id="temp">...&deg;C</div>
+            <div id="feels-like">Feels like: .. &deg;C</div>
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-up"></i>
+              <div id="sunrise">
+                Sunrise <br />
+                ...
+              </div>
+            </div>
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down"></i>
+              <div id="sunset">
+                Sunset <br />
+                ...
+              </div>
+            </div>
+          </div>
+
+          <!-- second portion -->
+          <div class="second">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <div id="description">....</div>
+          </div>
+
+          <!-- third portion -->
+          <div class="third">
+            <div class="parameters">
+              <i class="fa-solid fa-water"></i>
+              <div id="humidity">...&percnt;</div>
+              Humidity
+            </div>
+            <div class="parameters">
+              <i class="fa-brands fa-nfc-directional"></i>
+              <div id="pressure">...hPa</div>
+              Pressure
+            </div>
+            <div class="parameters">
+              <i class="fa-solid fa-wind"></i>
+              <div id="wind-speed">...km/h</div>
+              Wind Speed
+            </div>
+          </div>
+        </div>
+
+        <div class="warning">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          This application uses an API that provides data for mostly famous
+          cities. It primarily contains weather data for foreign cities, such as
+          London, Park Town, etc., and some famous Indian cities, such as Delhi,
+          Bangalore, and many more.
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
